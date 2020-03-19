@@ -45,7 +45,7 @@ public class ReadFromFile {
     public static Object usingObjectInputStream(String fileName) {
         Object obj = null;
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
-            ois.readObject();
+            obj = ois.readObject();
         } finally {
             return obj;
         }
